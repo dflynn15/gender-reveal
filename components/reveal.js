@@ -5,9 +5,18 @@ import GoButton from './go-button';
 export default class Reveal extends Component {
   constructor(props) {
     super(props);
+    this.socket = props.socket;
     this.state = {
       percentage: 0,
     };
+  }
+
+  componentDidMount() {
+    this.socket.on('percentage', ({ percentage }) => {
+      this.setState({
+        percentage,
+      });
+    });
   }
 
   render() {

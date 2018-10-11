@@ -11,7 +11,9 @@ let server = app.listen(port, () => {
   console.log(`Server started at ${port}`);
 });
 
-const socketServer = new socket(server);
+const io = new socket(server);
+
+app.set('socketio', io);
 
 process.on('SIGTERM', () => {
   server.close(() => {

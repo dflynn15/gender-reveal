@@ -20,6 +20,8 @@ router.get('/reset', (req, res) => {
 
 router.post('/increment', (req, res) => {
   revealCounter.increment();
+  const { socket } = req.app.get('socketio');
+  socket.emit('percentage', { percentage: revealCounter.status() });
 });
 
 export default router;
