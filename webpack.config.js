@@ -21,18 +21,17 @@ module.exports = {
         test: /\.s[c|a]ss$/,
         use: [
           'style-loader',
-          MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              includePaths: ['./node_modules'],
+            },
+          },
         ],
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin('dist', {}),
-    new MiniCssExtractPlugin({
-      filename: 'style.[contenthash].css',
-    }),
-  ],
+  plugins: [new CleanWebpackPlugin('dist', {})],
 };
