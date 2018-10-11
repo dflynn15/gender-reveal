@@ -1,0 +1,6 @@
+{
+  "name": "Gender Reveal",
+  "description": "Website for Gender Reveal",
+  "repository": "https://github.com/dflynn15/gender-reveal",
+  "keywords": ["node", "express", "static"]
+}
