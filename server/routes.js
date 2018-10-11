@@ -16,6 +16,7 @@ router.get('/', (req, res) => {
 
 router.get('/reset', (req, res) => {
   revealCounter.reset();
+  res.send(200);
 });
 
 router.post('/increment', (req, res) => {

@@ -20,7 +20,6 @@ export default class Counter {
   }
 
   status() {
-    console.log(this.count, this.limit);
     let percent = this.count / this.limit;
     return parseInt(percent * 100, 10);
   }
