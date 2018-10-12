@@ -7,7 +7,7 @@ export default class Reveal extends Component {
     super(props);
     this.socket = props.socket;
     this.state = {
-      percentage: 0,
+      percentage: props.percentage || 0,
     };
   }
 

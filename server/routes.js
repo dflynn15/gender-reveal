@@ -9,7 +9,8 @@ const router = express.Router();
 const revealCounter = new Counter();
 
 router.get('/', (req, res) => {
-  let reactDom = renderToString(<RevealApp />);
+  let percentage = revealCounter.status();
+  let reactDom = renderToString(<RevealApp percentage={percentage} />);
   res.writeHead(200, { 'Content-Type': 'text/html' });
   res.end(htmlTemplate(reactDom));
 });
