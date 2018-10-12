@@ -5,9 +5,11 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "run-p \"server\" \"build:js -- -w\"",
+    "start": "run-p \"server\" \"build:js:prod\"",
+    "start:dev": "run-p \"server\" \"build:js -- -w\"",
     "server": "nodemon --exec \"babel-node server/index.js\"",
-    "build:js": "webpack --config webpack.config.js --mode=development"
+    "build:js": "webpack --config webpack.config.js --mode=development",
+    "build:js:prod": "webpack --config webpack.config.js --mode=production"
   },
   "author": "",
   "license": "ISC",
