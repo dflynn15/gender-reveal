@@ -9,9 +9,19 @@ body {
   background: #e8f3e2;
 }
 
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .hero-button{
   margin: 0 auto;
   display: block;
+  padding: 0.5em 5em;
 }
 
 .circle {
