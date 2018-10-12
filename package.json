@@ -9,7 +9,7 @@
     "start:dev": "run-p \"server\" \"build:js -- -w\"",
     "server": "nodemon --exec \"babel-node server/index.js\"",
     "build:js": "webpack --config webpack.config.js --mode=development",
-    "build:js:prod": "webpack --config webpack.config.js --mode=production"
+    "build:js:prod": "webpack --config webpack.config.prod.js"
   },
   "author": "",
   "license": "ISC",
@@ -45,6 +45,7 @@
     "sass-loader": "^7.1.0",
     "socket.io": "^2.1.1",
     "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.20.2",
     "webpack-cli": "^3.1.2"
   },
