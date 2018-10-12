@@ -3,7 +3,7 @@ import Photon from './photon';
 export default class Counter {
   constructor() {
     this.count = 0;
-    this.limit = process.env.LIMIT || 5;
+    this.limit = parseInt(process.env.LIMIT, 10) || 5;
     this.photon = new Photon();
   }
 
