@@ -17,6 +17,7 @@ export default class Photon {
       .login({ username, password })
       .then(data => {
         this.token = data.body.access_token;
+        console.log('Successful login');
       })
       .catch(e => console.log('Could not log in.', e));
   }
