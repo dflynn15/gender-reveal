@@ -13,7 +13,7 @@ export default class Counter {
 
   increment() {
     this.count++;
-    console.log(this.count);
+    console.log(`\nCount: ${this.count}\nLimit:${this.limit}\n`);
     if (this.count === this.limit) {
       this.photon.trigger();
     }
