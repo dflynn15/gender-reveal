@@ -14,6 +14,7 @@ export default class Counter {
   increment() {
     this.count++;
     console.log(`\nCount: ${this.count}\nLimit:${this.limit}\n`);
+    console.log(`\nLimit Reached: ${this.count === this.limit}`);
     if (this.count === this.limit) {
       console.log('Limit reached!!');
       this.photon.trigger();
