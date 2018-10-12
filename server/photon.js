@@ -22,6 +22,7 @@ export default class Photon {
   }
 
   trigger() {
+    console.log('TRIGGGEEERRRR');
     if (this.token) {
       particle
         .callFunction({
